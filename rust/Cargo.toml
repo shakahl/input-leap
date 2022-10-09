@@ -1,11 +1,10 @@
 [package]
-name = "input-leap"
+name = "input-leap-rs"
 version = "2.4.0"
 edition = "2021"
 
 [lib]
-name = "inputleap"
-path = "rust_src/lib.rs"
+name = "input_leap_rs"
 crate-type = ["staticlib", "dylib"]
 
 [dependencies]

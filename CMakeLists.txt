@@ -353,4 +353,13 @@ endif()
 
 enable_testing()
 
+cmake_policy (SET CMP0079 NEW)
+
+set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+enable_language(Rust)
+include(CMakeCargo)
+
 add_subdirectory (src)
+add_subdirectory (rust)
+
+target_link_libraries(platform input_leap_rs)
